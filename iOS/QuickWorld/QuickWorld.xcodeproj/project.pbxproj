@@ -1,0 +1,599 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		076DB6DCFB934DF6BD6F0317 /* libPods-QuickWorldToday.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9ADD4CEF3E34D5791A19A70 /* libPods-QuickWorldToday.a */; };
+		632C89086BEC414CA65539CE /* libPods-QuickWorld.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 83A37030E2934916AE4DE05B /* libPods-QuickWorld.a */; };
+		E3A11C6C19EF0EAA00A7EAAE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E3A11C6B19EF0EAA00A7EAAE /* main.m */; };
+		E3A11C6F19EF0EAA00A7EAAE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E3A11C6E19EF0EAA00A7EAAE /* AppDelegate.m */; };
+		E3A11C7219EF0EAA00A7EAAE /* QuickWorld.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E3A11C7019EF0EAA00A7EAAE /* QuickWorld.xcdatamodeld */; };
+		E3A11C7519EF0EAA00A7EAAE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3A11C7419EF0EAA00A7EAAE /* ViewController.m */; };
+		E3A11C7819EF0EAA00A7EAAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3A11C7619EF0EAA00A7EAAE /* Main.storyboard */; };
+		E3A11C7A19EF0EAA00A7EAAE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3A11C7919EF0EAA00A7EAAE /* Images.xcassets */; };
+		E3A11C7D19EF0EAA00A7EAAE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3A11C7B19EF0EAA00A7EAAE /* LaunchScreen.xib */; };
+		E3A11C9819EF119800A7EAAE /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3A11C9719EF119800A7EAAE /* NotificationCenter.framework */; };
+		E3A11C9E19EF119800A7EAAE /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3A11C9D19EF119800A7EAAE /* TodayViewController.m */; };
+		E3A11CA019EF119800A7EAAE /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3A11C9F19EF119800A7EAAE /* MainInterface.storyboard */; };
+		E3A11CA319EF119800A7EAAE /* QuickWorldToday.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E3A11C9619EF119800A7EAAE /* QuickWorldToday.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		E3A11CAD19EF132C00A7EAAE /* WorldData.m in Sources */ = {isa = PBXBuildFile; fileRef = E3A11CAC19EF132C00A7EAAE /* WorldData.m */; };
+		E3A11CAE19EF132C00A7EAAE /* WorldData.m in Sources */ = {isa = PBXBuildFile; fileRef = E3A11CAC19EF132C00A7EAAE /* WorldData.m */; };
+		E3A11CB119EF2B2F00A7EAAE /* QuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3A11CB019EF2B2F00A7EAAE /* QuestionViewController.m */; };
+		E3A11CB219EF2B2F00A7EAAE /* QuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3A11CB019EF2B2F00A7EAAE /* QuestionViewController.m */; };
+		E3A11CB519EF2C9B00A7EAAE /* QuestionRotatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3A11CB419EF2C9B00A7EAAE /* QuestionRotatorViewController.m */; };
+		E3A11CB619EF2C9B00A7EAAE /* QuestionRotatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3A11CB419EF2C9B00A7EAAE /* QuestionRotatorViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E3A11CA119EF119800A7EAAE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E3A11C5E19EF0EAA00A7EAAE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E3A11C9519EF119800A7EAAE;
+			remoteInfo = QuickWorldToday;
+		};
+		E3A11CA419EF119800A7EAAE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E3A11C5E19EF0EAA00A7EAAE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E3A11C9519EF119800A7EAAE;
+			remoteInfo = QuickWorldToday;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E3A11CA919EF119800A7EAAE /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				E3A11CA319EF119800A7EAAE /* QuickWorldToday.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		37550ECF8DF1463D8DEDEC02 /* Pods-QuickWorld.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickWorld.xcconfig"; path = "Pods/Pods-QuickWorld.xcconfig"; sourceTree = "<group>"; };
+		83A37030E2934916AE4DE05B /* libPods-QuickWorld.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QuickWorld.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E3A11C6619EF0EAA00A7EAAE /* QuickWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuickWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E3A11C6A19EF0EAA00A7EAAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E3A11C6B19EF0EAA00A7EAAE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E3A11C6D19EF0EAA00A7EAAE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E3A11C6E19EF0EAA00A7EAAE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E3A11C7119EF0EAA00A7EAAE /* QuickWorld.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = QuickWorld.xcdatamodel; sourceTree = "<group>"; };
+		E3A11C7319EF0EAA00A7EAAE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		E3A11C7419EF0EAA00A7EAAE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		E3A11C7719EF0EAA00A7EAAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E3A11C7919EF0EAA00A7EAAE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		E3A11C7C19EF0EAA00A7EAAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		E3A11C9619EF119800A7EAAE /* QuickWorldToday.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = QuickWorldToday.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		E3A11C9719EF119800A7EAAE /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		E3A11C9B19EF119800A7EAAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E3A11C9C19EF119800A7EAAE /* TodayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodayViewController.h; sourceTree = "<group>"; };
+		E3A11C9D19EF119800A7EAAE /* TodayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodayViewController.m; sourceTree = "<group>"; };
+		E3A11C9F19EF119800A7EAAE /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
+		E3A11CAB19EF132C00A7EAAE /* WorldData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorldData.h; sourceTree = "<group>"; };
+		E3A11CAC19EF132C00A7EAAE /* WorldData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorldData.m; sourceTree = "<group>"; };
+		E3A11CAF19EF2B2F00A7EAAE /* QuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionViewController.h; sourceTree = "<group>"; };
+		E3A11CB019EF2B2F00A7EAAE /* QuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionViewController.m; sourceTree = "<group>"; };
+		E3A11CB319EF2C9B00A7EAAE /* QuestionRotatorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionRotatorViewController.h; sourceTree = "<group>"; };
+		E3A11CB419EF2C9B00A7EAAE /* QuestionRotatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionRotatorViewController.m; sourceTree = "<group>"; };
+		F64A6AF6B6D04B02ABA6CE53 /* Pods-QuickWorldToday.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickWorldToday.xcconfig"; path = "Pods/Pods-QuickWorldToday.xcconfig"; sourceTree = "<group>"; };
+		F9ADD4CEF3E34D5791A19A70 /* libPods-QuickWorldToday.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QuickWorldToday.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E3A11C6319EF0EAA00A7EAAE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				632C89086BEC414CA65539CE /* libPods-QuickWorld.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E3A11C9319EF119800A7EAAE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3A11C9819EF119800A7EAAE /* NotificationCenter.framework in Frameworks */,
+				076DB6DCFB934DF6BD6F0317 /* libPods-QuickWorldToday.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8A0171393AED417390ACF2C3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				83A37030E2934916AE4DE05B /* libPods-QuickWorld.a */,
+				E3A11C9719EF119800A7EAAE /* NotificationCenter.framework */,
+				F9ADD4CEF3E34D5791A19A70 /* libPods-QuickWorldToday.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E3A11C5D19EF0EAA00A7EAAE = {
+			isa = PBXGroup;
+			children = (
+				E3A11CAA19EF12F600A7EAAE /* Shared */,
+				E3A11C6819EF0EAA00A7EAAE /* QuickWorld */,
+				E3A11C9919EF119800A7EAAE /* QuickWorldToday */,
+				E3A11C6719EF0EAA00A7EAAE /* Products */,
+				37550ECF8DF1463D8DEDEC02 /* Pods-QuickWorld.xcconfig */,
+				8A0171393AED417390ACF2C3 /* Frameworks */,
+				F64A6AF6B6D04B02ABA6CE53 /* Pods-QuickWorldToday.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		E3A11C6719EF0EAA00A7EAAE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E3A11C6619EF0EAA00A7EAAE /* QuickWorld.app */,
+				E3A11C9619EF119800A7EAAE /* QuickWorldToday.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E3A11C6819EF0EAA00A7EAAE /* QuickWorld */ = {
+			isa = PBXGroup;
+			children = (
+				E3A11C6D19EF0EAA00A7EAAE /* AppDelegate.h */,
+				E3A11C6E19EF0EAA00A7EAAE /* AppDelegate.m */,
+				E3A11C7319EF0EAA00A7EAAE /* ViewController.h */,
+				E3A11C7419EF0EAA00A7EAAE /* ViewController.m */,
+				E3A11C7619EF0EAA00A7EAAE /* Main.storyboard */,
+				E3A11C7919EF0EAA00A7EAAE /* Images.xcassets */,
+				E3A11C7B19EF0EAA00A7EAAE /* LaunchScreen.xib */,
+				E3A11C7019EF0EAA00A7EAAE /* QuickWorld.xcdatamodeld */,
+				E3A11C6919EF0EAA00A7EAAE /* Supporting Files */,
+			);
+			path = QuickWorld;
+			sourceTree = "<group>";
+		};
+		E3A11C6919EF0EAA00A7EAAE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E3A11C6A19EF0EAA00A7EAAE /* Info.plist */,
+				E3A11C6B19EF0EAA00A7EAAE /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E3A11C9919EF119800A7EAAE /* QuickWorldToday */ = {
+			isa = PBXGroup;
+			children = (
+				E3A11C9C19EF119800A7EAAE /* TodayViewController.h */,
+				E3A11C9D19EF119800A7EAAE /* TodayViewController.m */,
+				E3A11C9F19EF119800A7EAAE /* MainInterface.storyboard */,
+				E3A11C9A19EF119800A7EAAE /* Supporting Files */,
+			);
+			path = QuickWorldToday;
+			sourceTree = "<group>";
+		};
+		E3A11C9A19EF119800A7EAAE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E3A11C9B19EF119800A7EAAE /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E3A11CAA19EF12F600A7EAAE /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				E3A11CAB19EF132C00A7EAAE /* WorldData.h */,
+				E3A11CAC19EF132C00A7EAAE /* WorldData.m */,
+				E3A11CAF19EF2B2F00A7EAAE /* QuestionViewController.h */,
+				E3A11CB019EF2B2F00A7EAAE /* QuestionViewController.m */,
+				E3A11CB319EF2C9B00A7EAAE /* QuestionRotatorViewController.h */,
+				E3A11CB419EF2C9B00A7EAAE /* QuestionRotatorViewController.m */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E3A11C6519EF0EAA00A7EAAE /* QuickWorld */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E3A11C8C19EF0EAA00A7EAAE /* Build configuration list for PBXNativeTarget "QuickWorld" */;
+			buildPhases = (
+				DBD8387B5D424B528F58043C /* Check Pods Manifest.lock */,
+				E3A11C6219EF0EAA00A7EAAE /* Sources */,
+				E3A11C6319EF0EAA00A7EAAE /* Frameworks */,
+				E3A11C6419EF0EAA00A7EAAE /* Resources */,
+				F0BE11C982D9474BA95D1B70 /* Copy Pods Resources */,
+				E3A11CA919EF119800A7EAAE /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E3A11CA219EF119800A7EAAE /* PBXTargetDependency */,
+				E3A11CA519EF119800A7EAAE /* PBXTargetDependency */,
+			);
+			name = QuickWorld;
+			productName = QuickWorld;
+			productReference = E3A11C6619EF0EAA00A7EAAE /* QuickWorld.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E3A11C9519EF119800A7EAAE /* QuickWorldToday */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E3A11CA819EF119800A7EAAE /* Build configuration list for PBXNativeTarget "QuickWorldToday" */;
+			buildPhases = (
+				F9CADC616DB4496A8A4F3E99 /* Check Pods Manifest.lock */,
+				E3A11C9219EF119800A7EAAE /* Sources */,
+				E3A11C9319EF119800A7EAAE /* Frameworks */,
+				E3A11C9419EF119800A7EAAE /* Resources */,
+				2C7FF8D67D00437791CC52B1 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QuickWorldToday;
+			productName = QuickWorldToday;
+			productReference = E3A11C9619EF119800A7EAAE /* QuickWorldToday.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E3A11C5E19EF0EAA00A7EAAE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = eralpkaraduman;
+				TargetAttributes = {
+					E3A11C6519EF0EAA00A7EAAE = {
+						CreatedOnToolsVersion = 6.0.1;
+					};
+					E3A11C9519EF119800A7EAAE = {
+						CreatedOnToolsVersion = 6.0.1;
+					};
+				};
+			};
+			buildConfigurationList = E3A11C6119EF0EAA00A7EAAE /* Build configuration list for PBXProject "QuickWorld" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E3A11C5D19EF0EAA00A7EAAE;
+			productRefGroup = E3A11C6719EF0EAA00A7EAAE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E3A11C6519EF0EAA00A7EAAE /* QuickWorld */,
+				E3A11C9519EF119800A7EAAE /* QuickWorldToday */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E3A11C6419EF0EAA00A7EAAE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3A11C7819EF0EAA00A7EAAE /* Main.storyboard in Resources */,
+				E3A11C7D19EF0EAA00A7EAAE /* LaunchScreen.xib in Resources */,
+				E3A11C7A19EF0EAA00A7EAAE /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E3A11C9419EF119800A7EAAE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3A11CA019EF119800A7EAAE /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2C7FF8D67D00437791CC52B1 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-QuickWorldToday-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DBD8387B5D424B528F58043C /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F0BE11C982D9474BA95D1B70 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-QuickWorld-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F9CADC616DB4496A8A4F3E99 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E3A11C6219EF0EAA00A7EAAE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3A11CB519EF2C9B00A7EAAE /* QuestionRotatorViewController.m in Sources */,
+				E3A11C6F19EF0EAA00A7EAAE /* AppDelegate.m in Sources */,
+				E3A11C6C19EF0EAA00A7EAAE /* main.m in Sources */,
+				E3A11CB119EF2B2F00A7EAAE /* QuestionViewController.m in Sources */,
+				E3A11C7519EF0EAA00A7EAAE /* ViewController.m in Sources */,
+				E3A11CAD19EF132C00A7EAAE /* WorldData.m in Sources */,
+				E3A11C7219EF0EAA00A7EAAE /* QuickWorld.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E3A11C9219EF119800A7EAAE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3A11CB619EF2C9B00A7EAAE /* QuestionRotatorViewController.m in Sources */,
+				E3A11CAE19EF132C00A7EAAE /* WorldData.m in Sources */,
+				E3A11C9E19EF119800A7EAAE /* TodayViewController.m in Sources */,
+				E3A11CB219EF2B2F00A7EAAE /* QuestionViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E3A11CA219EF119800A7EAAE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E3A11C9519EF119800A7EAAE /* QuickWorldToday */;
+			targetProxy = E3A11CA119EF119800A7EAAE /* PBXContainerItemProxy */;
+		};
+		E3A11CA519EF119800A7EAAE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E3A11C9519EF119800A7EAAE /* QuickWorldToday */;
+			targetProxy = E3A11CA419EF119800A7EAAE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E3A11C7619EF0EAA00A7EAAE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E3A11C7719EF0EAA00A7EAAE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E3A11C7B19EF0EAA00A7EAAE /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E3A11C7C19EF0EAA00A7EAAE /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E3A11C8A19EF0EAA00A7EAAE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E3A11C8B19EF0EAA00A7EAAE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E3A11C8D19EF0EAA00A7EAAE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 37550ECF8DF1463D8DEDEC02 /* Pods-QuickWorld.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = QuickWorld/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		E3A11C8E19EF0EAA00A7EAAE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 37550ECF8DF1463D8DEDEC02 /* Pods-QuickWorld.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = QuickWorld/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		E3A11CA619EF119800A7EAAE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F64A6AF6B6D04B02ABA6CE53 /* Pods-QuickWorldToday.xcconfig */;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = QuickWorldToday/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		E3A11CA719EF119800A7EAAE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F64A6AF6B6D04B02ABA6CE53 /* Pods-QuickWorldToday.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = QuickWorldToday/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E3A11C6119EF0EAA00A7EAAE /* Build configuration list for PBXProject "QuickWorld" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E3A11C8A19EF0EAA00A7EAAE /* Debug */,
+				E3A11C8B19EF0EAA00A7EAAE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E3A11C8C19EF0EAA00A7EAAE /* Build configuration list for PBXNativeTarget "QuickWorld" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E3A11C8D19EF0EAA00A7EAAE /* Debug */,
+				E3A11C8E19EF0EAA00A7EAAE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E3A11CA819EF119800A7EAAE /* Build configuration list for PBXNativeTarget "QuickWorldToday" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E3A11CA619EF119800A7EAAE /* Debug */,
+				E3A11CA719EF119800A7EAAE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E3A11C7019EF0EAA00A7EAAE /* QuickWorld.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E3A11C7119EF0EAA00A7EAAE /* QuickWorld.xcdatamodel */,
+			);
+			currentVersion = E3A11C7119EF0EAA00A7EAAE /* QuickWorld.xcdatamodel */;
+			path = QuickWorld.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = E3A11C5E19EF0EAA00A7EAAE /* Project object */;
+}

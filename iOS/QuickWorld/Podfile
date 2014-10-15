@@ -1,0 +1,12 @@
+# Uncomment this line to define a global platform for your project
+platform :ios, "8.0"
+
+target "QuickWorld" do
+pod "AFNetworking", "~> 2.0"
+pod 'NSMutableArray-Shuffle', '~> 0.4'
+end
+
+target "QuickWorldToday" do
+pod "AFNetworking", "~> 2.0"
+pod 'NSMutableArray-Shuffle', '~> 0.4'
+end
