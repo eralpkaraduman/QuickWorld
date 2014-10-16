@@ -27,7 +27,21 @@
 		E3A11CB519EF2C9B00A7EAAE /* QuestionRotatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3A11CB419EF2C9B00A7EAAE /* QuestionRotatorViewController.m */; };
 		E3A11CB619EF2C9B00A7EAAE /* QuestionRotatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3A11CB419EF2C9B00A7EAAE /* QuestionRotatorViewController.m */; };
 		E3A11CB719EF420B00A7EAAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3A11C7619EF0EAA00A7EAAE /* Main.storyboard */; };
+		E3A11CBD19EFE58000A7EAAE /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3A11CBC19EFE58000A7EAAE /* Crashlytics.framework */; };
+		E3A11CBE19EFE58100A7EAAE /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3A11CBC19EFE58000A7EAAE /* Crashlytics.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXBuildRule section */
+		E3A11CBA19EFE51D00A7EAAE /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			fileType = pattern.proxy;
+			isEditable = 1;
+			outputFiles = (
+			);
+			script = "Type a script or drag a script file from your workspace to insert its path";
+		};
+/* End PBXBuildRule section */
 
 /* Begin PBXContainerItemProxy section */
 		E3A11CA119EF119800A7EAAE /* PBXContainerItemProxy */ = {
@@ -88,6 +102,7 @@
 		E3A11CB419EF2C9B00A7EAAE /* QuestionRotatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionRotatorViewController.m; sourceTree = "<group>"; };
 		E3A11CB819EF442000A7EAAE /* QuickWorld.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = QuickWorld.entitlements; sourceTree = "<group>"; };
 		E3A11CB919EF445A00A7EAAE /* QuickWorldToday.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = QuickWorldToday.entitlements; sourceTree = "<group>"; };
+		E3A11CBC19EFE58000A7EAAE /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		F64A6AF6B6D04B02ABA6CE53 /* Pods-QuickWorldToday.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickWorldToday.xcconfig"; path = "Pods/Pods-QuickWorldToday.xcconfig"; sourceTree = "<group>"; };
 		F9ADD4CEF3E34D5791A19A70 /* libPods-QuickWorldToday.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QuickWorldToday.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -97,6 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3A11CBD19EFE58000A7EAAE /* Crashlytics.framework in Frameworks */,
 				632C89086BEC414CA65539CE /* libPods-QuickWorld.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -106,6 +122,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E3A11C9819EF119800A7EAAE /* NotificationCenter.framework in Frameworks */,
+				E3A11CBE19EFE58100A7EAAE /* Crashlytics.framework in Frameworks */,
 				076DB6DCFB934DF6BD6F0317 /* libPods-QuickWorldToday.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -130,6 +147,7 @@
 				E3A11C6819EF0EAA00A7EAAE /* QuickWorld */,
 				E3A11C9919EF119800A7EAAE /* QuickWorldToday */,
 				E3A11C6719EF0EAA00A7EAAE /* Products */,
+				E3A11CBC19EFE58000A7EAAE /* Crashlytics.framework */,
 				37550ECF8DF1463D8DEDEC02 /* Pods-QuickWorld.xcconfig */,
 				8A0171393AED417390ACF2C3 /* Frameworks */,
 				F64A6AF6B6D04B02ABA6CE53 /* Pods-QuickWorldToday.xcconfig */,
@@ -217,8 +235,10 @@
 				E3A11C6419EF0EAA00A7EAAE /* Resources */,
 				F0BE11C982D9474BA95D1B70 /* Copy Pods Resources */,
 				E3A11CA919EF119800A7EAAE /* Embed App Extensions */,
+				E3A11CBB19EFE55D00A7EAAE /* ShellScript */,
 			);
 			buildRules = (
+				E3A11CBA19EFE51D00A7EAAE /* PBXBuildRule */,
 			);
 			dependencies = (
 				E3A11CA219EF119800A7EAAE /* PBXTargetDependency */,
@@ -348,6 +368,19 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
+		};
+		E3A11CBB19EFE55D00A7EAAE /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Crashlytics.framework/run 9ee07938fcc120fc38a7ce1d5c43f2936deec7a9 f3b59f636eec4ee71ab08b322dc65ebbf49b7279b1297d7b41150612f769b582";
 		};
 		F0BE11C982D9474BA95D1B70 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -528,6 +561,10 @@
 				CODE_SIGN_ENTITLEMENTS = QuickWorld/QuickWorld.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = QuickWorld/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -543,6 +580,10 @@
 				CODE_SIGN_ENTITLEMENTS = QuickWorld/QuickWorld.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = QuickWorld/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -557,6 +598,10 @@
 				CODE_SIGN_ENTITLEMENTS = QuickWorldToday/QuickWorldToday.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -576,6 +621,10 @@
 				CODE_SIGN_ENTITLEMENTS = QuickWorldToday/QuickWorldToday.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = QuickWorldToday/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -28,12 +28,16 @@
     [super viewDidAppear:animated];
     
     
-    self.view.frame = CGRectMake(0, 0, 273, 100);
+    //self.view.frame = CGRectMake(0, 0, 320, 100);
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(UIEdgeInsets)widgetMarginInsetsForProposedMarginInsets:(UIEdgeInsets)defaultMarginInsets{
+    return UIEdgeInsetsZero;
 }
 
 - (void)widgetPerformUpdateWithCompletionHandler:(void (^)(NCUpdateResult))completionHandler {
