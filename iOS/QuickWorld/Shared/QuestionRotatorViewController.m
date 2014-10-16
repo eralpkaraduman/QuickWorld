@@ -9,6 +9,7 @@
 #import "QuestionRotatorViewController.h"
 #import "WorldData.h"
 
+#define INSTANTIATE_MAIN(viewController) [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:viewController]
 
 #define STORYBOARD_NAME     [[NSBundle mainBundle].infoDictionary objectForKey:@"UIMainStoryboardFile"]
 #define INSTANTIATE(viewController)     [[UIStoryboard storyboardWithName:STORYBOARD_NAME bundle:nil] instantiateViewControllerWithIdentifier:viewController]
@@ -24,7 +25,17 @@
     
     [self nextQuestion];
     
+    [self.view setClipsToBounds:YES];
+    
+    
+    
     // Do any additional setup after loading the view.
+}
+
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    
+    // 273
 }
 
 -(void)nextQuestion{
@@ -32,12 +43,13 @@
     [WorldData capitalsWithCompletionBlock:^(Question *question) {
         if(question){
             
-            QuestionViewController *questionVC = INSTANTIATE(@"QuestionViewController");
+            QuestionViewController *questionVC = INSTANTIATE_MAIN(@"QuestionViewController");
             questionVC.question = question;
             
             
             if(self.currentQuestionVC){
                 
+
                 CGRect initRect = self.view.bounds;
                 initRect.origin.y = -initRect.size.height;
                 
@@ -50,7 +62,7 @@
                 [self addChildViewController:questionVC];
                 
                 [self.currentQuestionVC beginAppearanceTransition:NO animated:YES];
-                [UIView animateWithDuration:0.5 animations:^{
+                [UIView animateWithDuration:0.25 animations:^{
                     [self.currentQuestionVC.view setFrame:endRect];
                     [questionVC.view setFrame:self.view.bounds];
                     
@@ -62,18 +74,39 @@
                     
                     self.currentQuestionVC = questionVC;
                 }];
-                
+
                 /*
-                [UIView transitionFromView:self.currentQuestionVC.view toView:questionVC.view duration:0.5 options:UIViewAnimationOptionTransitionNone completion:^(BOOL finished) {
-                    self.currentQuestionVC = questionVC;
-                }];
-                */
+
+                 CGRect initRect = self.view.bounds;
+                 //initRect.origin.y = -initRect.size.height;
+                 
+                 CGRect endRect = self.view.bounds;
+                 //endRect.origin.y = +initRect.size.height;
+                 
+                 questionVC.view.frame = initRect;
                 
+                 [questionVC beginAppearanceTransition:YES animated:NO];
+                 [self.view addSubview:questionVC.view];
+                 [self addChildViewController:questionVC];
+                 
+                 [self.currentQuestionVC beginAppearanceTransition:NO animated:YES];
+                 [UIView animateWithDuration:0.25 animations:^{
+                     //[self.currentQuestionVC.view setFrame:endRect];
+                     //[questionVC.view setFrame:self.view.bounds];
+                 
+                 } completion:^(BOOL finished) {
+                     [self.currentQuestionVC removeFromParentViewController];
+                     [self.currentQuestionVC.view removeFromSuperview];
+                     [self.currentQuestionVC endAppearanceTransition];
+                     self.currentQuestionVC = nil;
+                     
+                     self.currentQuestionVC = questionVC;
+                 }];
+
+                */
 
                 
             }else{
-                QuestionViewController *questionVC = INSTANTIATE(@"QuestionViewController");
-                questionVC.question = question;
                 [questionVC beginAppearanceTransition:YES animated:NO];
                 questionVC.view.frame = self.view.bounds;
                 [self.view addSubview:questionVC.view];

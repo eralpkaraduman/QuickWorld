@@ -26,7 +26,11 @@
             q.question = [NSString stringWithFormat:@"Capital of %@?",[correctCountry valueForKeyPath:@"name.common"]];
             NSMutableArray *m_answers = [NSMutableArray array];
             for(NSDictionary *country in countries){
-                [m_answers addObject:[country valueForKey:@"capital"]];
+                NSString *capital = [country valueForKey:@"capital"];
+                if(capital.length<=1){
+                    capital = @"N/A";
+                }
+                [m_answers addObject:capital];
             }
             q.answers = [NSArray arrayWithArray:m_answers];
             q.correctIndex = correctIndex;

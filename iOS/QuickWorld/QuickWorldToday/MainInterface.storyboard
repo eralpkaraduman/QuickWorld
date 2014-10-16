@@ -13,21 +13,25 @@
                         <viewControllerLayoutGuide type="bottom" id="FKl-LY-JtV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" simulatedAppContext="notificationCenter" id="S3S-Oj-5AN">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="37"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello World" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="GcN-lo-r42">
-                                <rect key="frame" x="20" y="8" width="280" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TKd-5I-l8x">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="SsN-9W-a0b"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="ijZ-MN-bs2" kind="embed" id="qLg-lg-owv"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="FKl-LY-JtV" firstAttribute="top" secondItem="GcN-lo-r42" secondAttribute="bottom" constant="8" symbolic="YES" id="0Q0-KW-PJ6"/>
-                            <constraint firstItem="GcN-lo-r42" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leading" constant="20" symbolic="YES" id="6Vq-gs-PHe"/>
-                            <constraint firstAttribute="trailing" secondItem="GcN-lo-r42" secondAttribute="trailing" constant="20" symbolic="YES" id="L8K-9R-egU"/>
-                            <constraint firstItem="GcN-lo-r42" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" constant="8" symbolic="YES" id="mYS-Cv-VNx"/>
+                            <constraint firstItem="TKd-5I-l8x" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" id="Par-pn-9Fy"/>
+                            <constraint firstItem="TKd-5I-l8x" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leading" id="V9n-gg-cvN"/>
+                            <constraint firstItem="FKl-LY-JtV" firstAttribute="top" secondItem="TKd-5I-l8x" secondAttribute="bottom" id="VHR-BT-aEm"/>
+                            <constraint firstAttribute="trailing" secondItem="TKd-5I-l8x" secondAttribute="trailing" id="ffr-Tk-YPm"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
@@ -35,11 +39,30 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="320" height="37"/>
+                    <size key="freeformSize" width="320" height="100"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="516" y="285"/>
+        </scene>
+        <!--Question Rotator View Controller-->
+        <scene sceneID="zmV-Rh-ALq">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="ijZ-MN-bs2" customClass="QuestionRotatorViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vPw-9i-wQJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="0SQ-kh-5GU"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="0sH-kI-vEW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iJC-gG-Ycu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="387" y="837"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

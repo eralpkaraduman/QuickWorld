@@ -28,6 +28,7 @@
     [super viewDidAppear:animated];
     
     
+    self.view.frame = CGRectMake(0, 0, 273, 100);
 }
 
 - (void)didReceiveMemoryWarning {
