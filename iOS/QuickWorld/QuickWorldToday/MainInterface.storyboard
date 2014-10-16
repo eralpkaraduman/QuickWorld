@@ -18,7 +18,7 @@
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TKd-5I-l8x">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="SsN-9W-a0b"/>
                                 </constraints>
@@ -27,6 +27,7 @@
                                 </connections>
                             </containerView>
                         </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="TKd-5I-l8x" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" id="Par-pn-9Fy"/>
                             <constraint firstItem="TKd-5I-l8x" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leading" id="V9n-gg-cvN"/>
