@@ -17,4 +17,6 @@
 
 @interface WorldData : NSObject
 +(void)capitalsWithCompletionBlock:(void (^)(Question *question))block;
++(void)saveLastQuestion:(Question*)question;
++(Question*)lastQuestion;
 @end

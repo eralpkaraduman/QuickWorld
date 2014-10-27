@@ -7,10 +7,11 @@
 //
 
 #import "TodayViewController.h"
+#import "QuestionRotatorViewController.h"
 #import <NotificationCenter/NotificationCenter.h>
 
 @interface TodayViewController () <NCWidgetProviding>
-
+@property QuestionRotatorViewController *rotatorVC;
 @end
 
 @implementation TodayViewController
@@ -21,14 +22,20 @@
     
     //NSLog(@"%@",NSStringFromCGRect(self.view.frame));
     
-    
+    self.preferredContentSize = CGSizeMake(320,100);
 }
 
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
     
-    
-    //self.view.frame = CGRectMake(0, 0, 320, 100);
+    self.preferredContentSize = CGSizeMake(320,100);
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if([segue.identifier isEqualToString:@"embedRotator"]){
+        self.rotatorVC = segue.destinationViewController;
+        [self.rotatorVC reload];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -41,6 +48,11 @@
 }
 
 - (void)widgetPerformUpdateWithCompletionHandler:(void (^)(NCUpdateResult))completionHandler {
+
+    if(self.rotatorVC){
+        [self.rotatorVC reload];
+    }
+    
     // Perform any setup necessary in order to update the view.
     
     // If an error is encountered, use NCUpdateResultFailed

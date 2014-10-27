@@ -11,4 +11,5 @@
 
 @interface QuestionRotatorViewController : UIViewController
 -(void)questionViewController:(QuestionViewController*)questionViewController completedWithCorrectAnswer:(BOOL)correct;
+-(void)reload;
 @end

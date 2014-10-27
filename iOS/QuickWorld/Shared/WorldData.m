@@ -12,6 +12,9 @@
 
 @implementation WorldData
 
+__strong static AFHTTPRequestOperationManager *manager;
+__strong static AFHTTPRequestOperation *operation;
+
 +(void)capitalsWithCompletionBlock:(void (^)(Question *question))block{
     
     [WorldData countriesWithBlock:^(NSArray *countries) {
@@ -75,16 +78,21 @@
 
 +(void)countriesWithBlock:(void (^)(NSArray *countries))block{
     
-    __block NSArray *countries = [[NSUserDefaults standardUserDefaults] objectForKey:@"WorldData"];
+    NSUserDefaults *shared = [[NSUserDefaults alloc] initWithSuiteName:@"group.com.eralpkaraduman.QuickWorld"];
+    __block NSArray *countries = [shared objectForKey:@"WorldData"];
     if(countries){
         if(block)block(countries);
     }else{
-        [WorldData loadWorldDataWithCompletionBlock:^(NSError *error) {
-            
-            countries = [[NSUserDefaults standardUserDefaults] objectForKey:@"WorldData"];
+        if(operation)[operation cancel];
+        operation = [WorldData loadWorldDataWithCompletionBlock:^(NSError *error) {
+
+            NSUserDefaults *shared = [[NSUserDefaults alloc] initWithSuiteName:@"group.com.eralpkaraduman.QuickWorld"];
+            countries = [shared objectForKey:@"WorldData"];
             
             if(countries == nil)countries = [NSArray array];
-            if(block)block(countries);
+            if(block){
+                block(countries);
+            }
         }];
     }
     
@@ -93,14 +101,14 @@
 
 +(AFHTTPRequestOperation*)loadWorldDataWithCompletionBlock:(void (^)(NSError *error))block{
     
-    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager = [AFHTTPRequestOperationManager manager];
     manager.responseSerializer.acceptableContentTypes = [manager.responseSerializer.acceptableContentTypes setByAddingObject:@"text/plain"];
     
     return [manager GET:@"https://raw.githubusercontent.com/eralpkaraduman/countries/master/countries.json" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
         //NSLog(@"JSON: %@", responseObject);
-        
-        [[NSUserDefaults standardUserDefaults] setObject:responseObject forKey:@"WorldData"];
-        [[NSUserDefaults standardUserDefaults] synchronize];
+        NSUserDefaults *shared = [[NSUserDefaults alloc] initWithSuiteName:@"group.com.eralpkaraduman.QuickWorld"];
+        [shared setObject:responseObject forKey:@"WorldData"];
+        [shared synchronize];
         
         if(block)block(nil);
         
@@ -109,6 +117,33 @@
         if(block)block(error);
     }];
     
+}
+
++(void)saveLastQuestion:(Question*)question{
+    NSMutableDictionary *questionData = [NSMutableDictionary dictionary];
+    [questionData setObject:question.answers forKey:@"answers"];
+    [questionData setObject:question.question forKey:@"question"];
+    [questionData setObject:@(question.correctIndex) forKey:@"correctIndex"];
+    
+    NSUserDefaults *shared = [[NSUserDefaults alloc] initWithSuiteName:@"group.com.eralpkaraduman.QuickWorld"];
+    [shared setObject:questionData forKey:@"LastGeneratedQuestion"];
+    [shared synchronize];
+
+}
+
++(Question*)lastQuestion{
+    NSUserDefaults *shared = [[NSUserDefaults alloc] initWithSuiteName:@"group.com.eralpkaraduman.QuickWorld"];
+    NSDictionary *questionData = [shared objectForKey:@"LastGeneratedQuestion"];
+    if(questionData){
+        Question *question =[[Question alloc] init];
+        question.question = [questionData valueForKey:@"question"];
+        question.answers = [questionData objectForKey:@"answers"];
+        question.correctIndex = [[questionData valueForKey:@"correctIndex"] integerValue];
+        return question;
+    }
+    
+    return nil;
+
 }
 
 @end
