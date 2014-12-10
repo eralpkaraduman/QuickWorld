@@ -8,14 +8,29 @@
 
 #import "QuestionRotatorViewController.h"
 #import "WorldData.h"
+#import <UIImage+GIF.h>
+#include <AudioToolbox/AudioToolbox.h>
 
 #define INSTANTIATE_MAIN(viewController) [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:viewController]
 
 #define STORYBOARD_NAME     [[NSBundle mainBundle].infoDictionary objectForKey:@"UIMainStoryboardFile"]
 #define INSTANTIATE(viewController)     [[UIStoryboard storyboardWithName:STORYBOARD_NAME bundle:nil] instantiateViewControllerWithIdentifier:viewController]
 
-@interface QuestionRotatorViewController ()
+static NSArray *success_gifs;
+static NSArray *fail_gifs;
+
+@interface QuestionRotatorViewController (){
+    UIImageView *iv_bg;
+    UIImageView *iv;
+    UITapGestureRecognizer *tapGesture;
+    NSUInteger lastIndex_success;
+    NSUInteger lastIndex_fail;
+    
+    SystemSoundID successSound;
+    SystemSoundID failSound;
+}
 @property QuestionViewController *currentQuestionVC;
+@property (strong, nonatomic) IBOutlet UIView *resultContainer;
 @property UIActivityIndicatorView *spinner;
 @end
 
@@ -23,8 +38,19 @@
 
 
 
+
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
+    
+    NSString *successSoundPath = [[NSBundle mainBundle]
+                            pathForResource:@"success" ofType:@"mp3"];
+    NSURL *successSoundURL = [NSURL fileURLWithPath:successSoundPath];
+    AudioServicesCreateSystemSoundID((__bridge CFURLRef)successSoundURL, &successSound);
+    
+    NSString *failSoundPath = [[NSBundle mainBundle]
+                                  pathForResource:@"fail" ofType:@"mp3"];
+    NSURL *failSoundURL = [NSURL fileURLWithPath:failSoundPath];
+    AudioServicesCreateSystemSoundID((__bridge CFURLRef)failSoundURL, &failSound);
     
     [self reload];
 
@@ -121,35 +147,7 @@
             self.currentQuestionVC = questionVC;
         }];
         
-        /*
-         
-         CGRect initRect = self.view.bounds;
-         //initRect.origin.y = -initRect.size.height;
-         
-         CGRect endRect = self.view.bounds;
-         //endRect.origin.y = +initRect.size.height;
-         
-         questionVC.view.frame = initRect;
-         
-         [questionVC beginAppearanceTransition:YES animated:NO];
-         [self.view addSubview:questionVC.view];
-         [self addChildViewController:questionVC];
-         
-         [self.currentQuestionVC beginAppearanceTransition:NO animated:YES];
-         [UIView animateWithDuration:0.25 animations:^{
-         //[self.currentQuestionVC.view setFrame:endRect];
-         //[questionVC.view setFrame:self.view.bounds];
-         
-         } completion:^(BOOL finished) {
-         [self.currentQuestionVC removeFromParentViewController];
-         [self.currentQuestionVC.view removeFromSuperview];
-         [self.currentQuestionVC endAppearanceTransition];
-         self.currentQuestionVC = nil;
-         
-         self.currentQuestionVC = questionVC;
-         }];
-         
-         */
+        
         
         
     }else{
@@ -169,8 +167,158 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void)showResultCorrect:(BOOL)correct question:(Question*)question withCompletionBlock:(void (^)())block{
+    
+    AudioServicesPlaySystemSound(correct?successSound:failSound);
+    
+    iv.alpha = 0;
+    iv_bg.alpha = 0;
+    
+    [self setGif:[self getGifForSuccess:correct]];
+    
+    [UIView animateWithDuration:0.4 animations:^{
+        
+        [self.currentQuestionVC.view setAlpha:0];
+        iv.alpha = 1;
+        iv_bg.alpha = 1;
+        
+    } completion:^(BOOL finished) {
+
+        if(block)block();
+        
+    }];
+}
+
+-(UIImage*)getGifForSuccess:(BOOL)success{
+    /*
+    if(success_gifs==nil){
+        success_gifs = @[[UIImage sd_animatedGIFNamed:@"success_001"],
+                         [UIImage sd_animatedGIFNamed:@"success_002"],
+                         [UIImage sd_animatedGIFNamed:@"success_003"],
+                         [UIImage sd_animatedGIFNamed:@"success_004"],
+                         [UIImage sd_animatedGIFNamed:@"success_005"],
+                         [UIImage sd_animatedGIFNamed:@"success_006"],
+                         [UIImage sd_animatedGIFNamed:@"success_007"],
+                         [UIImage sd_animatedGIFNamed:@"success_008"],
+                         [UIImage sd_animatedGIFNamed:@"success_009"],
+                         [UIImage sd_animatedGIFNamed:@"success_010"],
+                         [UIImage sd_animatedGIFNamed:@"success_011"]
+                         ];
+    }
+    
+    if(fail_gifs==nil){
+        fail_gifs = @[[UIImage sd_animatedGIFNamed:@"fail_001"],
+                      [UIImage sd_animatedGIFNamed:@"fail_002"],
+                      [UIImage sd_animatedGIFNamed:@"fail_003"],
+                      [UIImage sd_animatedGIFNamed:@"fail_004"],
+                      [UIImage sd_animatedGIFNamed:@"fail_005"],
+                      [UIImage sd_animatedGIFNamed:@"fail_006"],
+                      [UIImage sd_animatedGIFNamed:@"fail_007"],
+                      [UIImage sd_animatedGIFNamed:@"fail_008"]];
+    }
+    */
+    
+    if(success_gifs==nil){
+        success_gifs = @[//@"success_001",
+                         //@"success_002",
+                         @"success_003",
+                         @"success_004",
+                         //@"success_005",
+                         //@"success_006",
+                         //@"success_007",
+                         //@"success_008",
+                         @"success_009",
+                         //@"success_010",
+                         @"success_011"
+                         ];
+    }
+    
+    if(fail_gifs==nil){
+        fail_gifs = @[@"fail_001",
+                      @"fail_002",
+                      //@"fail_003",
+                      //@"fail_004",
+                      @"fail_005",
+                      @"fail_006",
+                      //@"fail_007",
+                      @"fail_008"];
+    }
+    
+    NSUInteger lastIndex = success?lastIndex_success:lastIndex_fail;
+    NSArray* gifList = success?success_gifs:fail_gifs;
+    
+
+    
+    NSUInteger randomIndex = arc4random() % [gifList count];
+    while (randomIndex==lastIndex) {
+        randomIndex = arc4random() % [gifList count];
+    }
+    
+
+    
+    if(success)lastIndex_success = randomIndex;
+    else lastIndex_fail = randomIndex;
+
+    NSString *name = gifList[randomIndex];
+    
+    NSLog(@"name %@",name);
+    
+    return [UIImage sd_animatedGIFNamed:name];
+    
+}
+
+-(void)setGif:(UIImage*)gifImage{
+    
+    
+    if(iv_bg==nil){
+        iv_bg = [[UIImageView alloc] initWithImage:gifImage];
+        iv_bg.contentMode = UIViewContentModeScaleAspectFill;
+        iv_bg.frame = self.view.frame;
+    }else{
+        [iv_bg setImage:gifImage];
+    }
+    [self.view addSubview:iv_bg];
+    
+    if(iv==nil){
+        iv = [[UIImageView alloc] initWithImage:gifImage];
+        iv.contentMode = UIViewContentModeScaleAspectFit;
+        iv.frame = self.view.frame;
+    }else{
+        [iv setImage:gifImage];
+    }
+    [self.view addSubview:iv];
+    
+}
+
 -(void)questionViewController:(QuestionViewController*)questionViewController completedWithCorrectAnswer:(BOOL)correct{
+    
+    if(tapGesture == nil){
+        tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onTapEverything)];
+    }
+    
+    [self showResultCorrect:correct question:questionViewController.question withCompletionBlock:^{
+        
+        [self.view addGestureRecognizer:tapGesture];
+        
+        
+        //[self nextQuestion];
+    }];
+    
+    
+}
+
+-(void)onTapEverything{
+    
+    [self.view removeGestureRecognizer:tapGesture];
+    
     [self nextQuestion];
+    
+    [UIView animateWithDuration:0.3 animations:^{
+        iv.alpha = iv_bg.alpha = 0;
+    } completion:^(BOOL finished) {
+        [iv setImage:nil];
+        [iv_bg setImage:nil];
+    }];
 }
 
 /*

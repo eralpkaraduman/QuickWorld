@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-QuickWorld-SDWebImage.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-QuickWorld.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -29,6 +34,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-QuickWorldToday-SDWebImage.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-QuickWorldToday.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,32 +47,42 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>13F9C33559A546EAB923A964</key>
+		<key>2A8DF51C568434D83E841BAE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>31AACE06CBF44C8C8503BDFA</key>
+		<key>68FBB64455D3F5EF238AEE3A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>61EDFB2CC03346148364D503</key>
+		<key>7A27583D037390CAF7BA0719</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>787E39630B8A49A6838A45C4</key>
+		<key>90A9990EA3D64D5A79B067EF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AC289C4DB1A2443EB474AF47</key>
+		<key>C2B8277DC726148769222473</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E9CEC2A89A1E4E8AB1D57876</key>
+		<key>EFE00B4DF56095B104DEE216</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F6DA6CC2D9170E797E5F7A93</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FEB0E6CDFEB7DC96BFBC2132</key>
 		<dict>
 			<key>primary</key>
 			<true/>

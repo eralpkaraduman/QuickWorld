@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -17,6 +17,117 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="satellite" zoomEnabled="NO" rotateEnabled="NO" pitchEnabled="NO" showsBuildings="NO" showsPointsOfInterest="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yvQ-hK-xuX">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gaj-9x-sV1">
+                                <rect key="frame" x="0.0" y="144" width="320" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="sfa-Pt-1Db"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="Q">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="38" name="Helvetica-Bold"/>
+                                            <font key="NSOriginalFont" size="48" name="Helvetica-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="u">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="38" name="Helvetica-Bold"/>
+                                            <font key="NSOriginalFont" size="48" name="Helvetica-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="i">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="38" name="Helvetica-Bold"/>
+                                            <font key="NSOriginalFont" size="48" name="Helvetica-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="C">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="38" name="Helvetica-Bold"/>
+                                            <font key="NSOriginalFont" size="48" name="Helvetica-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="k">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="38" name="Helvetica-Bold"/>
+                                            <font key="NSOriginalFont" size="48" name="Helvetica-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" red="0.50196081399917603" green="0.0" blue="0.25098040699958801" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="38" name="Helvetica-Bold"/>
+                                            <font key="NSOriginalFont" size="48" name="Helvetica-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="w">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.50196081399917603" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="38" name="Helvetica-Bold"/>
+                                            <font key="NSOriginalFont" size="48" name="Helvetica-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="O">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="38" name="Helvetica-Bold"/>
+                                            <font key="NSOriginalFont" size="48" name="Helvetica-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="r">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="38" name="Helvetica-Bold"/>
+                                            <font key="NSOriginalFont" size="48" name="Helvetica-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="L">
+                                        <attributes>
+                                            <color key="NSColor" red="0.29803922772407532" green="0.29803922772407532" blue="0.29803922772407532" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="38" name="Helvetica-Bold"/>
+                                            <font key="NSOriginalFont" size="48" name="Helvetica-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="d">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="1" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="38" name="Helvetica-Bold"/>
+                                            <font key="NSOriginalFont" size="48" name="Helvetica-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                                <size key="shadowOffset" width="3" height="3"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jLQ-vi-a3W">
+                                <rect key="frame" x="0.0" y="144" width="320" height="40"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onTapTitle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="66K-t1-fKQ"/>
+                                </connections>
+                            </button>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bIF-0z-9Ag">
                                 <rect key="frame" x="0.0" y="234" width="320" height="100"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -28,13 +139,85 @@
                                     <segue destination="PIL-l6-Ern" kind="embed" id="pYj-Ot-4TL"/>
                                 </connections>
                             </containerView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sdg" translatesAutoresizingMaskIntoConstraints="NO" id="Ux8-dz-Dtt">
+                                <rect key="frame" x="75" y="394" width="64" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="64" id="ZQf-T6-bO1"/>
+                                    <constraint firstAttribute="height" constant="64" id="xgg-XG-iSc"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SUPER DAMAGE GAMES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tIm-ON-5Fk">
+                                <rect key="frame" x="147" y="386" width="98" height="79"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="79" id="Mzc-nu-Xbo"/>
+                                    <constraint firstAttribute="width" constant="98" id="hev-ZI-9gp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" red="1" green="0.38989631116207951" blue="0.062679185779816515" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <size key="shadowOffset" width="2" height="2"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CHECK OUT!" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vcD-7w-8Qh">
+                                <rect key="frame" x="60" y="326" width="200" height="79"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="79" id="ETL-Qk-tj9"/>
+                                    <constraint firstAttribute="width" constant="200" id="GvP-yf-XBx"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="122" id="NaW-L4-gmi"/>
+                                    <constraint firstAttribute="height" constant="41" id="iG2-aT-JDX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="20"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="NaW-L4-gmi"/>
+                                        <exclude reference="iG2-aT-JDX"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9iI-5C-j79">
+                                <rect key="frame" x="75" y="394" width="165" height="64"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onTapSDG:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f1w-ja-6WZ"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="vcD-7w-8Qh" firstAttribute="centerX" secondItem="Ux8-dz-Dtt" secondAttribute="centerX" constant="53" id="6nB-rB-Olh"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="yvQ-hK-xuX" secondAttribute="bottom" id="70N-Cl-kEt"/>
+                            <constraint firstItem="jLQ-vi-a3W" firstAttribute="centerY" secondItem="Gaj-9x-sV1" secondAttribute="centerY" id="7l5-fQ-iiQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Gaj-9x-sV1" secondAttribute="trailing" constant="-16" id="AZW-KF-hCW"/>
+                            <constraint firstItem="Ux8-dz-Dtt" firstAttribute="centerX" secondItem="9iI-5C-j79" secondAttribute="centerX" constant="-50.5" id="FCb-2w-fQf"/>
+                            <constraint firstItem="yvQ-hK-xuX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="H3v-1d-SJB"/>
+                            <constraint firstItem="vcD-7w-8Qh" firstAttribute="centerY" secondItem="Ux8-dz-Dtt" secondAttribute="centerY" constant="-60.5" id="KG2-Cg-QIM"/>
+                            <constraint firstItem="jLQ-vi-a3W" firstAttribute="width" secondItem="Gaj-9x-sV1" secondAttribute="width" id="MoM-oT-uYH"/>
+                            <constraint firstAttribute="trailing" secondItem="yvQ-hK-xuX" secondAttribute="trailing" id="N1e-oG-Zod"/>
+                            <constraint firstItem="yvQ-hK-xuX" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Nxd-hf-Fvh"/>
+                            <constraint firstItem="Ux8-dz-Dtt" firstAttribute="centerY" secondItem="9iI-5C-j79" secondAttribute="centerY" id="P2H-GO-y45"/>
+                            <constraint firstItem="jLQ-vi-a3W" firstAttribute="centerX" secondItem="Gaj-9x-sV1" secondAttribute="centerX" id="TNZ-j1-rng"/>
                             <constraint firstAttribute="centerX" secondItem="bIF-0z-9Ag" secondAttribute="centerX" id="Zk9-Hk-D7U"/>
+                            <constraint firstItem="9iI-5C-j79" firstAttribute="trailing" secondItem="tIm-ON-5Fk" secondAttribute="trailing" constant="-5" id="eFW-if-d1W"/>
+                            <constraint firstItem="Ux8-dz-Dtt" firstAttribute="centerX" secondItem="bIF-0z-9Ag" secondAttribute="centerX" constant="-53" id="fSE-l6-Lxq"/>
                             <constraint firstAttribute="centerY" secondItem="bIF-0z-9Ag" secondAttribute="centerY" id="hjG-Qn-Nt8"/>
+                            <constraint firstItem="Ux8-dz-Dtt" firstAttribute="leading" secondItem="9iI-5C-j79" secondAttribute="leading" id="ioU-zh-4TC"/>
+                            <constraint firstItem="Ux8-dz-Dtt" firstAttribute="centerY" secondItem="tIm-ON-5Fk" secondAttribute="centerY" constant="0.5" id="kkd-eo-cyR"/>
+                            <constraint firstItem="Gaj-9x-sV1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="kyA-mV-g5Y"/>
+                            <constraint firstItem="bIF-0z-9Ag" firstAttribute="top" secondItem="Gaj-9x-sV1" secondAttribute="bottom" constant="50" id="mzk-0q-7jg"/>
+                            <constraint firstItem="tIm-ON-5Fk" firstAttribute="leading" secondItem="Ux8-dz-Dtt" secondAttribute="trailing" constant="8" id="s3l-rk-DL2"/>
+                            <constraint firstItem="jLQ-vi-a3W" firstAttribute="height" secondItem="Gaj-9x-sV1" secondAttribute="height" id="vTJ-al-sD5"/>
+                            <constraint firstItem="Ux8-dz-Dtt" firstAttribute="top" secondItem="bIF-0z-9Ag" secondAttribute="bottom" constant="60" id="waM-Jn-Qxb"/>
+                            <constraint firstItem="Ux8-dz-Dtt" firstAttribute="height" secondItem="9iI-5C-j79" secondAttribute="height" id="xup-EF-eDj"/>
                         </constraints>
                     </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -59,7 +242,7 @@
                                     <constraint firstAttribute="height" constant="1" id="4U7-Uv-wuT"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vyr-WO-KlT" userLabel="buttonLeft">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vyr-WO-KlT" userLabel="buttonLeft">
                                 <rect key="frame" x="0.0" y="50" width="161" height="50"/>
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -68,7 +251,7 @@
                                     <action selector="onTapLeftButton:" destination="mxZ-Wr-6Hz" eventType="touchUpInside" id="xFi-Mb-3NJ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uwu-Gd-Sgl" userLabel="buttonRight">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uwu-Gd-Sgl" userLabel="buttonRight">
                                 <rect key="frame" x="160" y="50" width="160" height="50"/>
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -82,7 +265,7 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question?" textAlignment="center" lineBreakMode="middleTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="13" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ENd-br-3SU" userLabel="questionLabel">
                                         <rect key="frame" x="10" y="0.0" width="300" height="50"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -201,12 +384,14 @@
                     <connections>
                         <outlet property="answerLeft" destination="XMS-ep-Ufs" id="9kB-KJ-EKw"/>
                         <outlet property="answerRight" destination="tVR-d9-yfj" id="ra2-Bc-VSm"/>
+                        <outlet property="leftButton" destination="Vyr-WO-KlT" id="oBX-l3-Sbp"/>
                         <outlet property="questionLabel" destination="ENd-br-3SU" id="CGq-6f-6wZ"/>
+                        <outlet property="rightButton" destination="uwu-Gd-Sgl" id="z3S-dF-1i8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TLD-DM-BbT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="213" y="-49"/>
+            <point key="canvasLocation" x="221" y="-94"/>
         </scene>
         <!--Question Rotator View Controller-->
         <scene sceneID="hYz-Gc-zls">
@@ -236,4 +421,7 @@
             <point key="canvasLocation" x="844" y="-149"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="sdg" width="64" height="64"/>
+    </resources>
 </document>

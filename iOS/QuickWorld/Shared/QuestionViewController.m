@@ -8,12 +8,18 @@
 
 #import "QuestionViewController.h"
 #import "QuestionRotatorViewController.h"
+#import "UIImage+Color.h"
 
-@interface QuestionViewController ()
+@interface QuestionViewController (){
+    BOOL completed;
+}
 @property IBOutlet UILabel *answerLeft;
 @property IBOutlet UILabel *answerRight;
 @property IBOutlet UILabel *questionLabel;
 @property IBOutlet NSLayoutConstraint *paneHorizontalCenter;
+
+@property IBOutlet UIButton *leftButton;
+@property IBOutlet UIButton *rightButton;
 
 @end
 
@@ -28,6 +34,19 @@
     self.answerRight.text = self.question.answers.lastObject;
     self.questionLabel.text = self.question.question;
     
+    UIColor *selectedColor = [UIColor colorWithWhite:0.2 alpha:0.8];
+    
+    [self.leftButton setBackgroundImage:[UIImage imageWithColor:[UIColor clearColor]] forState:UIControlStateNormal];
+    
+    [self.leftButton setBackgroundImage:[UIImage imageWithColor:[UIColor clearColor]] forState:UIControlStateNormal];
+    
+    [self.leftButton setBackgroundImage:[UIImage imageWithColor:selectedColor] forState:UIControlStateHighlighted];
+    
+    [self.leftButton setBackgroundImage:[UIImage imageWithColor:selectedColor] forState:UIControlStateSelected];
+    
+    [self.rightButton setBackgroundImage:[UIImage imageWithColor:selectedColor] forState:UIControlStateHighlighted];
+    
+    [self.rightButton setBackgroundImage:[UIImage imageWithColor:selectedColor] forState:UIControlStateSelected];
     
 }
 
@@ -37,19 +56,34 @@
 }
 
 -(IBAction)onTapLeftButton:(id)sender{
+    [self.leftButton setSelected:YES];
+    
     [self checkIndex:0];
+    
+    //
 }
 
 -(IBAction)onTapRightButton:(id)sender{
+    [self.rightButton setSelected:YES];
+    
+    
     [self checkIndex:1];
+    
+    //
 }
 
 -(void)checkIndex:(NSInteger)index{
+    
+    if(completed)return;
+    
+    self.view.userInteractionEnabled = false;
     
     BOOL correct = index == self.question.correctIndex;
     
     QuestionRotatorViewController *rotator = (QuestionRotatorViewController*)self.parentViewController;
     [rotator questionViewController:self completedWithCorrectAnswer:correct];
+    
+    completed = true;
 }
 
 /*

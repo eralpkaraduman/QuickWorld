@@ -30,10 +30,16 @@ __strong static AFHTTPRequestOperation *operation;
             NSMutableArray *m_answers = [NSMutableArray array];
             for(NSDictionary *country in countries){
                 NSString *capital = [country valueForKey:@"capital"];
+                
+                BOOL canAdd = true;
+                
                 if(capital.length<=1){
                     capital = @"N/A";
+                    canAdd = false;
                 }
-                [m_answers addObject:capital];
+                
+                if(canAdd)[m_answers addObject:capital];
+                //;
             }
             q.answers = [NSArray arrayWithArray:m_answers];
             q.correctIndex = correctIndex;

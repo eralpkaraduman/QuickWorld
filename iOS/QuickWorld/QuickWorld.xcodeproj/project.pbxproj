@@ -9,13 +9,42 @@
 /* Begin PBXBuildFile section */
 		076DB6DCFB934DF6BD6F0317 /* libPods-QuickWorldToday.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9ADD4CEF3E34D5791A19A70 /* libPods-QuickWorldToday.a */; };
 		632C89086BEC414CA65539CE /* libPods-QuickWorld.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 83A37030E2934916AE4DE05B /* libPods-QuickWorld.a */; };
+		E307C6211A36838A00443359 /* fail.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E307C61F1A36838A00443359 /* fail.mp3 */; };
+		E307C6221A36838A00443359 /* fail.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E307C61F1A36838A00443359 /* fail.mp3 */; };
+		E307C6231A36838A00443359 /* success.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E307C6201A36838A00443359 /* success.mp3 */; };
+		E307C6241A36838A00443359 /* success.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E307C6201A36838A00443359 /* success.mp3 */; };
+		E307C6261A36842200443359 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E307C6251A36842200443359 /* AudioToolbox.framework */; };
+		E307C6271A36842A00443359 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E307C6251A36842200443359 /* AudioToolbox.framework */; };
+		E307C6291A37B12200443359 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E307C6281A37B12200443359 /* MapKit.framework */; };
+		E307C62B1A37C4F200443359 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E307C62A1A37C4F200443359 /* Fabric.framework */; };
+		E38D33FA1A36556F004AC78D /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = E38D33F71A36556F004AC78D /* UIColor+Hex.m */; };
+		E38D33FB1A36556F004AC78D /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = E38D33F71A36556F004AC78D /* UIColor+Hex.m */; };
+		E38D33FC1A36556F004AC78D /* UIImage+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = E38D33F91A36556F004AC78D /* UIImage+Color.m */; };
+		E38D33FD1A36556F004AC78D /* UIImage+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = E38D33F91A36556F004AC78D /* UIImage+Color.m */; };
+		E38D34241A367992004AC78D /* fail_001.gif in Resources */ = {isa = PBXBuildFile; fileRef = E38D34111A367992004AC78D /* fail_001.gif */; };
+		E38D34251A367992004AC78D /* fail_001.gif in Resources */ = {isa = PBXBuildFile; fileRef = E38D34111A367992004AC78D /* fail_001.gif */; };
+		E38D34261A367992004AC78D /* fail_002.gif in Resources */ = {isa = PBXBuildFile; fileRef = E38D34121A367992004AC78D /* fail_002.gif */; };
+		E38D34271A367992004AC78D /* fail_002.gif in Resources */ = {isa = PBXBuildFile; fileRef = E38D34121A367992004AC78D /* fail_002.gif */; };
+		E38D342C1A367992004AC78D /* fail_005.gif in Resources */ = {isa = PBXBuildFile; fileRef = E38D34151A367992004AC78D /* fail_005.gif */; };
+		E38D342D1A367992004AC78D /* fail_005.gif in Resources */ = {isa = PBXBuildFile; fileRef = E38D34151A367992004AC78D /* fail_005.gif */; };
+		E38D342E1A367992004AC78D /* fail_006.gif in Resources */ = {isa = PBXBuildFile; fileRef = E38D34161A367992004AC78D /* fail_006.gif */; };
+		E38D342F1A367992004AC78D /* fail_006.gif in Resources */ = {isa = PBXBuildFile; fileRef = E38D34161A367992004AC78D /* fail_006.gif */; };
+		E38D34321A367992004AC78D /* fail_008.gif in Resources */ = {isa = PBXBuildFile; fileRef = E38D34181A367992004AC78D /* fail_008.gif */; };
+		E38D34331A367992004AC78D /* fail_008.gif in Resources */ = {isa = PBXBuildFile; fileRef = E38D34181A367992004AC78D /* fail_008.gif */; };
+		E38D34381A367992004AC78D /* success_003.gif in Resources */ = {isa = PBXBuildFile; fileRef = E38D341B1A367992004AC78D /* success_003.gif */; };
+		E38D34391A367992004AC78D /* success_003.gif in Resources */ = {isa = PBXBuildFile; fileRef = E38D341B1A367992004AC78D /* success_003.gif */; };
+		E38D343A1A367992004AC78D /* success_004.gif in Resources */ = {isa = PBXBuildFile; fileRef = E38D341C1A367992004AC78D /* success_004.gif */; };
+		E38D343B1A367992004AC78D /* success_004.gif in Resources */ = {isa = PBXBuildFile; fileRef = E38D341C1A367992004AC78D /* success_004.gif */; };
+		E38D34441A367992004AC78D /* success_009.gif in Resources */ = {isa = PBXBuildFile; fileRef = E38D34211A367992004AC78D /* success_009.gif */; };
+		E38D34451A367992004AC78D /* success_009.gif in Resources */ = {isa = PBXBuildFile; fileRef = E38D34211A367992004AC78D /* success_009.gif */; };
+		E38D34481A367992004AC78D /* success_011.gif in Resources */ = {isa = PBXBuildFile; fileRef = E38D34231A367992004AC78D /* success_011.gif */; };
+		E38D34491A367992004AC78D /* success_011.gif in Resources */ = {isa = PBXBuildFile; fileRef = E38D34231A367992004AC78D /* success_011.gif */; };
 		E3A11C6C19EF0EAA00A7EAAE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E3A11C6B19EF0EAA00A7EAAE /* main.m */; };
 		E3A11C6F19EF0EAA00A7EAAE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E3A11C6E19EF0EAA00A7EAAE /* AppDelegate.m */; };
 		E3A11C7219EF0EAA00A7EAAE /* QuickWorld.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E3A11C7019EF0EAA00A7EAAE /* QuickWorld.xcdatamodeld */; };
 		E3A11C7519EF0EAA00A7EAAE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3A11C7419EF0EAA00A7EAAE /* ViewController.m */; };
 		E3A11C7819EF0EAA00A7EAAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3A11C7619EF0EAA00A7EAAE /* Main.storyboard */; };
 		E3A11C7A19EF0EAA00A7EAAE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3A11C7919EF0EAA00A7EAAE /* Images.xcassets */; };
-		E3A11C7D19EF0EAA00A7EAAE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3A11C7B19EF0EAA00A7EAAE /* LaunchScreen.xib */; };
 		E3A11C9819EF119800A7EAAE /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3A11C9719EF119800A7EAAE /* NotificationCenter.framework */; };
 		E3A11C9E19EF119800A7EAAE /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3A11C9D19EF119800A7EAAE /* TodayViewController.m */; };
 		E3A11CA019EF119800A7EAAE /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3A11C9F19EF119800A7EAAE /* MainInterface.storyboard */; };
@@ -28,7 +57,6 @@
 		E3A11CB619EF2C9B00A7EAAE /* QuestionRotatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3A11CB419EF2C9B00A7EAAE /* QuestionRotatorViewController.m */; };
 		E3A11CB719EF420B00A7EAAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3A11C7619EF0EAA00A7EAAE /* Main.storyboard */; };
 		E3A11CBD19EFE58000A7EAAE /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3A11CBC19EFE58000A7EAAE /* Crashlytics.framework */; };
-		E3A11CBE19EFE58100A7EAAE /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3A11CBC19EFE58000A7EAAE /* Crashlytics.framework */; };
 		E3A11CBF19EFF90C00A7EAAE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3A11C7919EF0EAA00A7EAAE /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -76,8 +104,29 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		37550ECF8DF1463D8DEDEC02 /* Pods-QuickWorld.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickWorld.xcconfig"; path = "Pods/Pods-QuickWorld.xcconfig"; sourceTree = "<group>"; };
+		236B6ABF3CD31958A3B6D089 /* Pods-QuickWorldToday.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickWorldToday.release.xcconfig"; path = "Pods/Target Support Files/Pods-QuickWorldToday/Pods-QuickWorldToday.release.xcconfig"; sourceTree = "<group>"; };
+		248EC72C83D840651E1146F8 /* Pods-QuickWorld.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickWorld.release.xcconfig"; path = "Pods/Target Support Files/Pods-QuickWorld/Pods-QuickWorld.release.xcconfig"; sourceTree = "<group>"; };
 		83A37030E2934916AE4DE05B /* libPods-QuickWorld.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QuickWorld.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		92180E5A75C0B15A7107BD26 /* Pods-QuickWorld.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickWorld.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QuickWorld/Pods-QuickWorld.debug.xcconfig"; sourceTree = "<group>"; };
+		E2805147C9E1B0A346789C04 /* Pods-QuickWorldToday.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickWorldToday.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QuickWorldToday/Pods-QuickWorldToday.debug.xcconfig"; sourceTree = "<group>"; };
+		E307C61F1A36838A00443359 /* fail.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = fail.mp3; sourceTree = "<group>"; };
+		E307C6201A36838A00443359 /* success.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = success.mp3; sourceTree = "<group>"; };
+		E307C6251A36842200443359 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		E307C6281A37B12200443359 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		E307C62A1A37C4F200443359 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		E38D33F61A36556F004AC78D /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
+		E38D33F71A36556F004AC78D /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
+		E38D33F81A36556F004AC78D /* UIImage+Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Color.h"; sourceTree = "<group>"; };
+		E38D33F91A36556F004AC78D /* UIImage+Color.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Color.m"; sourceTree = "<group>"; };
+		E38D34111A367992004AC78D /* fail_001.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = fail_001.gif; sourceTree = "<group>"; };
+		E38D34121A367992004AC78D /* fail_002.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = fail_002.gif; sourceTree = "<group>"; };
+		E38D34151A367992004AC78D /* fail_005.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = fail_005.gif; sourceTree = "<group>"; };
+		E38D34161A367992004AC78D /* fail_006.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = fail_006.gif; sourceTree = "<group>"; };
+		E38D34181A367992004AC78D /* fail_008.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = fail_008.gif; sourceTree = "<group>"; };
+		E38D341B1A367992004AC78D /* success_003.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = success_003.gif; sourceTree = "<group>"; };
+		E38D341C1A367992004AC78D /* success_004.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = success_004.gif; sourceTree = "<group>"; };
+		E38D34211A367992004AC78D /* success_009.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = success_009.gif; sourceTree = "<group>"; };
+		E38D34231A367992004AC78D /* success_011.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = success_011.gif; sourceTree = "<group>"; };
 		E3A11C6619EF0EAA00A7EAAE /* QuickWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuickWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3A11C6A19EF0EAA00A7EAAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E3A11C6B19EF0EAA00A7EAAE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -88,7 +137,6 @@
 		E3A11C7419EF0EAA00A7EAAE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		E3A11C7719EF0EAA00A7EAAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E3A11C7919EF0EAA00A7EAAE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		E3A11C7C19EF0EAA00A7EAAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		E3A11C9619EF119800A7EAAE /* QuickWorldToday.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = QuickWorldToday.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3A11C9719EF119800A7EAAE /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		E3A11C9B19EF119800A7EAAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -104,7 +152,6 @@
 		E3A11CB819EF442000A7EAAE /* QuickWorld.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = QuickWorld.entitlements; sourceTree = "<group>"; };
 		E3A11CB919EF445A00A7EAAE /* QuickWorldToday.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = QuickWorldToday.entitlements; sourceTree = "<group>"; };
 		E3A11CBC19EFE58000A7EAAE /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
-		F64A6AF6B6D04B02ABA6CE53 /* Pods-QuickWorldToday.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickWorldToday.xcconfig"; path = "Pods/Pods-QuickWorldToday.xcconfig"; sourceTree = "<group>"; };
 		F9ADD4CEF3E34D5791A19A70 /* libPods-QuickWorldToday.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QuickWorldToday.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -113,6 +160,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E307C6291A37B12200443359 /* MapKit.framework in Frameworks */,
+				E307C62B1A37C4F200443359 /* Fabric.framework in Frameworks */,
+				E307C6271A36842A00443359 /* AudioToolbox.framework in Frameworks */,
 				E3A11CBD19EFE58000A7EAAE /* Crashlytics.framework in Frameworks */,
 				632C89086BEC414CA65539CE /* libPods-QuickWorld.a in Frameworks */,
 			);
@@ -122,8 +172,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E307C6261A36842200443359 /* AudioToolbox.framework in Frameworks */,
 				E3A11C9819EF119800A7EAAE /* NotificationCenter.framework in Frameworks */,
-				E3A11CBE19EFE58100A7EAAE /* Crashlytics.framework in Frameworks */,
 				076DB6DCFB934DF6BD6F0317 /* libPods-QuickWorldToday.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -134,6 +184,8 @@
 		8A0171393AED417390ACF2C3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E307C6281A37B12200443359 /* MapKit.framework */,
+				E307C6251A36842200443359 /* AudioToolbox.framework */,
 				83A37030E2934916AE4DE05B /* libPods-QuickWorld.a */,
 				E3A11C9719EF119800A7EAAE /* NotificationCenter.framework */,
 				F9ADD4CEF3E34D5791A19A70 /* libPods-QuickWorldToday.a */,
@@ -141,17 +193,42 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		E307C61E1A36836200443359 /* sfx */ = {
+			isa = PBXGroup;
+			children = (
+				E307C61F1A36838A00443359 /* fail.mp3 */,
+				E307C6201A36838A00443359 /* success.mp3 */,
+			);
+			name = sfx;
+			sourceTree = "<group>";
+		};
+		E38D33FE1A366B70004AC78D /* gifs */ = {
+			isa = PBXGroup;
+			children = (
+				E38D34111A367992004AC78D /* fail_001.gif */,
+				E38D34121A367992004AC78D /* fail_002.gif */,
+				E38D34151A367992004AC78D /* fail_005.gif */,
+				E38D34161A367992004AC78D /* fail_006.gif */,
+				E38D34181A367992004AC78D /* fail_008.gif */,
+				E38D341B1A367992004AC78D /* success_003.gif */,
+				E38D341C1A367992004AC78D /* success_004.gif */,
+				E38D34211A367992004AC78D /* success_009.gif */,
+				E38D34231A367992004AC78D /* success_011.gif */,
+			);
+			name = gifs;
+			sourceTree = "<group>";
+		};
 		E3A11C5D19EF0EAA00A7EAAE = {
 			isa = PBXGroup;
 			children = (
+				E307C62A1A37C4F200443359 /* Fabric.framework */,
 				E3A11CAA19EF12F600A7EAAE /* Shared */,
 				E3A11C6819EF0EAA00A7EAAE /* QuickWorld */,
 				E3A11C9919EF119800A7EAAE /* QuickWorldToday */,
 				E3A11C6719EF0EAA00A7EAAE /* Products */,
 				E3A11CBC19EFE58000A7EAAE /* Crashlytics.framework */,
-				37550ECF8DF1463D8DEDEC02 /* Pods-QuickWorld.xcconfig */,
 				8A0171393AED417390ACF2C3 /* Frameworks */,
-				F64A6AF6B6D04B02ABA6CE53 /* Pods-QuickWorldToday.xcconfig */,
+				F3CBE503269BBFB8BA873B65 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -174,7 +251,6 @@
 				E3A11C7419EF0EAA00A7EAAE /* ViewController.m */,
 				E3A11C7619EF0EAA00A7EAAE /* Main.storyboard */,
 				E3A11C7919EF0EAA00A7EAAE /* Images.xcassets */,
-				E3A11C7B19EF0EAA00A7EAAE /* LaunchScreen.xib */,
 				E3A11C7019EF0EAA00A7EAAE /* QuickWorld.xcdatamodeld */,
 				E3A11C6919EF0EAA00A7EAAE /* Supporting Files */,
 			);
@@ -213,6 +289,12 @@
 		E3A11CAA19EF12F600A7EAAE /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				E307C61E1A36836200443359 /* sfx */,
+				E38D33FE1A366B70004AC78D /* gifs */,
+				E38D33F61A36556F004AC78D /* UIColor+Hex.h */,
+				E38D33F71A36556F004AC78D /* UIColor+Hex.m */,
+				E38D33F81A36556F004AC78D /* UIImage+Color.h */,
+				E38D33F91A36556F004AC78D /* UIImage+Color.m */,
 				E3A11CAB19EF132C00A7EAAE /* WorldData.h */,
 				E3A11CAC19EF132C00A7EAAE /* WorldData.m */,
 				E3A11CAF19EF2B2F00A7EAAE /* QuestionViewController.h */,
@@ -221,6 +303,17 @@
 				E3A11CB419EF2C9B00A7EAAE /* QuestionRotatorViewController.m */,
 			);
 			path = Shared;
+			sourceTree = "<group>";
+		};
+		F3CBE503269BBFB8BA873B65 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				92180E5A75C0B15A7107BD26 /* Pods-QuickWorld.debug.xcconfig */,
+				248EC72C83D840651E1146F8 /* Pods-QuickWorld.release.xcconfig */,
+				E2805147C9E1B0A346789C04 /* Pods-QuickWorldToday.debug.xcconfig */,
+				236B6ABF3CD31958A3B6D089 /* Pods-QuickWorldToday.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,7 +329,7 @@
 				E3A11C6419EF0EAA00A7EAAE /* Resources */,
 				F0BE11C982D9474BA95D1B70 /* Copy Pods Resources */,
 				E3A11CA919EF119800A7EAAE /* Embed App Extensions */,
-				E3A11CBB19EFE55D00A7EAAE /* ShellScript */,
+				E321901D1A37C9530047F696 /* ShellScript */,
 			);
 			buildRules = (
 				E3A11CBA19EFE51D00A7EAAE /* PBXBuildRule */,
@@ -322,8 +415,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E38D34441A367992004AC78D /* success_009.gif in Resources */,
+				E38D34261A367992004AC78D /* fail_002.gif in Resources */,
+				E38D34321A367992004AC78D /* fail_008.gif in Resources */,
+				E38D34481A367992004AC78D /* success_011.gif in Resources */,
+				E38D34381A367992004AC78D /* success_003.gif in Resources */,
+				E307C6231A36838A00443359 /* success.mp3 in Resources */,
+				E38D343A1A367992004AC78D /* success_004.gif in Resources */,
 				E3A11C7819EF0EAA00A7EAAE /* Main.storyboard in Resources */,
-				E3A11C7D19EF0EAA00A7EAAE /* LaunchScreen.xib in Resources */,
+				E38D34241A367992004AC78D /* fail_001.gif in Resources */,
+				E38D342C1A367992004AC78D /* fail_005.gif in Resources */,
+				E38D342E1A367992004AC78D /* fail_006.gif in Resources */,
+				E307C6211A36838A00443359 /* fail.mp3 in Resources */,
 				E3A11C7A19EF0EAA00A7EAAE /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -332,8 +435,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E38D34451A367992004AC78D /* success_009.gif in Resources */,
+				E38D34271A367992004AC78D /* fail_002.gif in Resources */,
+				E38D34331A367992004AC78D /* fail_008.gif in Resources */,
+				E38D34491A367992004AC78D /* success_011.gif in Resources */,
+				E38D34391A367992004AC78D /* success_003.gif in Resources */,
+				E307C6241A36838A00443359 /* success.mp3 in Resources */,
+				E38D343B1A367992004AC78D /* success_004.gif in Resources */,
 				E3A11CBF19EFF90C00A7EAAE /* Images.xcassets in Resources */,
+				E38D34251A367992004AC78D /* fail_001.gif in Resources */,
+				E38D342D1A367992004AC78D /* fail_005.gif in Resources */,
+				E38D342F1A367992004AC78D /* fail_006.gif in Resources */,
 				E3A11CA019EF119800A7EAAE /* MainInterface.storyboard in Resources */,
+				E307C6221A36838A00443359 /* fail.mp3 in Resources */,
 				E3A11CB719EF420B00A7EAAE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -353,7 +467,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-QuickWorldToday-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QuickWorldToday/Pods-QuickWorldToday-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		DBD8387B5D424B528F58043C /* Check Pods Manifest.lock */ = {
@@ -371,7 +485,7 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		E3A11CBB19EFE55D00A7EAAE /* ShellScript */ = {
+		E321901D1A37C9530047F696 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -382,7 +496,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "./Crashlytics.framework/run 9ee07938fcc120fc38a7ce1d5c43f2936deec7a9 f3b59f636eec4ee71ab08b322dc65ebbf49b7279b1297d7b41150612f769b582";
+			shellScript = "./Fabric.framework/run 9ee07938fcc120fc38a7ce1d5c43f2936deec7a9 f3b59f636eec4ee71ab08b322dc65ebbf49b7279b1297d7b41150612f769b582";
 		};
 		F0BE11C982D9474BA95D1B70 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -396,7 +510,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-QuickWorld-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QuickWorld/Pods-QuickWorld-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F9CADC616DB4496A8A4F3E99 /* Check Pods Manifest.lock */ = {
@@ -426,6 +540,8 @@
 				E3A11C6C19EF0EAA00A7EAAE /* main.m in Sources */,
 				E3A11CB119EF2B2F00A7EAAE /* QuestionViewController.m in Sources */,
 				E3A11C7519EF0EAA00A7EAAE /* ViewController.m in Sources */,
+				E38D33FA1A36556F004AC78D /* UIColor+Hex.m in Sources */,
+				E38D33FC1A36556F004AC78D /* UIImage+Color.m in Sources */,
 				E3A11CAD19EF132C00A7EAAE /* WorldData.m in Sources */,
 				E3A11C7219EF0EAA00A7EAAE /* QuickWorld.xcdatamodeld in Sources */,
 			);
@@ -436,7 +552,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E3A11CB619EF2C9B00A7EAAE /* QuestionRotatorViewController.m in Sources */,
+				E38D33FB1A36556F004AC78D /* UIColor+Hex.m in Sources */,
 				E3A11CAE19EF132C00A7EAAE /* WorldData.m in Sources */,
+				E38D33FD1A36556F004AC78D /* UIImage+Color.m in Sources */,
 				E3A11C9E19EF119800A7EAAE /* TodayViewController.m in Sources */,
 				E3A11CB219EF2B2F00A7EAAE /* QuestionViewController.m in Sources */,
 			);
@@ -464,14 +582,6 @@
 				E3A11C7719EF0EAA00A7EAAE /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		E3A11C7B19EF0EAA00A7EAAE /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E3A11C7C19EF0EAA00A7EAAE /* Base */,
-			);
-			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -557,10 +667,10 @@
 		};
 		E3A11C8D19EF0EAA00A7EAAE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 37550ECF8DF1463D8DEDEC02 /* Pods-QuickWorld.xcconfig */;
+			baseConfigurationReference = 92180E5A75C0B15A7107BD26 /* Pods-QuickWorld.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = QuickWorld/QuickWorld.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -569,6 +679,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = QuickWorld/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -577,10 +688,10 @@
 		};
 		E3A11C8E19EF0EAA00A7EAAE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 37550ECF8DF1463D8DEDEC02 /* Pods-QuickWorld.xcconfig */;
+			baseConfigurationReference = 248EC72C83D840651E1146F8 /* Pods-QuickWorld.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = QuickWorld/QuickWorld.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -589,6 +700,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = QuickWorld/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -597,9 +709,10 @@
 		};
 		E3A11CA619EF119800A7EAAE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F64A6AF6B6D04B02ABA6CE53 /* Pods-QuickWorldToday.xcconfig */;
+			baseConfigurationReference = E2805147C9E1B0A346789C04 /* Pods-QuickWorldToday.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = QuickWorldToday/QuickWorldToday.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -612,6 +725,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = QuickWorldToday/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -621,9 +735,10 @@
 		};
 		E3A11CA719EF119800A7EAAE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F64A6AF6B6D04B02ABA6CE53 /* Pods-QuickWorldToday.xcconfig */;
+			baseConfigurationReference = 236B6ABF3CD31958A3B6D089 /* Pods-QuickWorldToday.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = QuickWorldToday/QuickWorldToday.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -632,6 +747,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = QuickWorldToday/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
