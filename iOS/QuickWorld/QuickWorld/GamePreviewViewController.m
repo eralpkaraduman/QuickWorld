@@ -6,14 +6,14 @@
 //  Copyright (c) 2014 eralpkaraduman. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "GamePreviewViewController.h"
 #import "WorldData.h"
 
-@interface ViewController () <UIAlertViewDelegate>
+@interface GamePreviewViewController () <UIAlertViewDelegate>
 
 @end
 
-@implementation ViewController
+@implementation GamePreviewViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

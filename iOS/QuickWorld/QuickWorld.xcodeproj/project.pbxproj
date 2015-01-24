@@ -17,6 +17,7 @@
 		E307C6271A36842A00443359 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E307C6251A36842200443359 /* AudioToolbox.framework */; };
 		E307C6291A37B12200443359 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E307C6281A37B12200443359 /* MapKit.framework */; };
 		E307C62B1A37C4F200443359 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E307C62A1A37C4F200443359 /* Fabric.framework */; };
+		E354139F1A74221E00CC96E5 /* IntroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E354139E1A74221E00CC96E5 /* IntroViewController.m */; };
 		E38D33FA1A36556F004AC78D /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = E38D33F71A36556F004AC78D /* UIColor+Hex.m */; };
 		E38D33FB1A36556F004AC78D /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = E38D33F71A36556F004AC78D /* UIColor+Hex.m */; };
 		E38D33FC1A36556F004AC78D /* UIImage+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = E38D33F91A36556F004AC78D /* UIImage+Color.m */; };
@@ -42,7 +43,7 @@
 		E3A11C6C19EF0EAA00A7EAAE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E3A11C6B19EF0EAA00A7EAAE /* main.m */; };
 		E3A11C6F19EF0EAA00A7EAAE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E3A11C6E19EF0EAA00A7EAAE /* AppDelegate.m */; };
 		E3A11C7219EF0EAA00A7EAAE /* QuickWorld.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E3A11C7019EF0EAA00A7EAAE /* QuickWorld.xcdatamodeld */; };
-		E3A11C7519EF0EAA00A7EAAE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3A11C7419EF0EAA00A7EAAE /* ViewController.m */; };
+		E3A11C7519EF0EAA00A7EAAE /* GamePreviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3A11C7419EF0EAA00A7EAAE /* GamePreviewViewController.m */; };
 		E3A11C7819EF0EAA00A7EAAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3A11C7619EF0EAA00A7EAAE /* Main.storyboard */; };
 		E3A11C7A19EF0EAA00A7EAAE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3A11C7919EF0EAA00A7EAAE /* Images.xcassets */; };
 		E3A11C9819EF119800A7EAAE /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3A11C9719EF119800A7EAAE /* NotificationCenter.framework */; };
@@ -114,6 +115,8 @@
 		E307C6251A36842200443359 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		E307C6281A37B12200443359 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		E307C62A1A37C4F200443359 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		E354139D1A74221E00CC96E5 /* IntroViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntroViewController.h; sourceTree = "<group>"; };
+		E354139E1A74221E00CC96E5 /* IntroViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntroViewController.m; sourceTree = "<group>"; };
 		E38D33F61A36556F004AC78D /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
 		E38D33F71A36556F004AC78D /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
 		E38D33F81A36556F004AC78D /* UIImage+Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Color.h"; sourceTree = "<group>"; };
@@ -133,8 +136,8 @@
 		E3A11C6D19EF0EAA00A7EAAE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E3A11C6E19EF0EAA00A7EAAE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		E3A11C7119EF0EAA00A7EAAE /* QuickWorld.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = QuickWorld.xcdatamodel; sourceTree = "<group>"; };
-		E3A11C7319EF0EAA00A7EAAE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		E3A11C7419EF0EAA00A7EAAE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		E3A11C7319EF0EAA00A7EAAE /* GamePreviewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GamePreviewViewController.h; sourceTree = "<group>"; };
+		E3A11C7419EF0EAA00A7EAAE /* GamePreviewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GamePreviewViewController.m; sourceTree = "<group>"; };
 		E3A11C7719EF0EAA00A7EAAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E3A11C7919EF0EAA00A7EAAE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E3A11C9619EF119800A7EAAE /* QuickWorldToday.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = QuickWorldToday.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -247,12 +250,14 @@
 				E3A11CB819EF442000A7EAAE /* QuickWorld.entitlements */,
 				E3A11C6D19EF0EAA00A7EAAE /* AppDelegate.h */,
 				E3A11C6E19EF0EAA00A7EAAE /* AppDelegate.m */,
-				E3A11C7319EF0EAA00A7EAAE /* ViewController.h */,
-				E3A11C7419EF0EAA00A7EAAE /* ViewController.m */,
+				E3A11C7319EF0EAA00A7EAAE /* GamePreviewViewController.h */,
+				E3A11C7419EF0EAA00A7EAAE /* GamePreviewViewController.m */,
 				E3A11C7619EF0EAA00A7EAAE /* Main.storyboard */,
 				E3A11C7919EF0EAA00A7EAAE /* Images.xcassets */,
 				E3A11C7019EF0EAA00A7EAAE /* QuickWorld.xcdatamodeld */,
 				E3A11C6919EF0EAA00A7EAAE /* Supporting Files */,
+				E354139D1A74221E00CC96E5 /* IntroViewController.h */,
+				E354139E1A74221E00CC96E5 /* IntroViewController.m */,
 			);
 			path = QuickWorld;
 			sourceTree = "<group>";
@@ -539,11 +544,12 @@
 				E3A11C6F19EF0EAA00A7EAAE /* AppDelegate.m in Sources */,
 				E3A11C6C19EF0EAA00A7EAAE /* main.m in Sources */,
 				E3A11CB119EF2B2F00A7EAAE /* QuestionViewController.m in Sources */,
-				E3A11C7519EF0EAA00A7EAAE /* ViewController.m in Sources */,
+				E3A11C7519EF0EAA00A7EAAE /* GamePreviewViewController.m in Sources */,
 				E38D33FA1A36556F004AC78D /* UIColor+Hex.m in Sources */,
 				E38D33FC1A36556F004AC78D /* UIImage+Color.m in Sources */,
 				E3A11CAD19EF132C00A7EAAE /* WorldData.m in Sources */,
 				E3A11C7219EF0EAA00A7EAAE /* QuickWorld.xcdatamodeld in Sources */,
+				E354139F1A74221E00CC96E5 /* IntroViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

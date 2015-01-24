@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "EFE00B4DF56095B104DEE216"
+               BlueprintIdentifier = "B2E8033A6C4F7C2C4C811952"
                BuildableName = "libPods-QuickWorld-NSMutableArray-Shuffle.a"
                BlueprintName = "Pods-QuickWorld-NSMutableArray-Shuffle"
                ReferencedContainer = "container:Pods.xcodeproj">

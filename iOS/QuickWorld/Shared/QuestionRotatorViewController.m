@@ -28,6 +28,8 @@ static NSArray *fail_gifs;
     
     SystemSoundID successSound;
     SystemSoundID failSound;
+    
+    UILabel *scoreView;
 }
 @property QuestionViewController *currentQuestionVC;
 @property (strong, nonatomic) IBOutlet UIView *resultContainer;
@@ -35,9 +37,6 @@ static NSArray *fail_gifs;
 @end
 
 @implementation QuestionRotatorViewController
-
-
-
 
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
@@ -52,8 +51,32 @@ static NSArray *fail_gifs;
     NSURL *failSoundURL = [NSURL fileURLWithPath:failSoundPath];
     AudioServicesCreateSystemSoundID((__bridge CFURLRef)failSoundURL, &failSound);
     
+    if(scoreView==nil){
+        CGRect scoreViewRect = self.view.bounds;
+        scoreViewRect.size.height = 20.0f;
+        scoreViewRect.origin.x = 6.0f;
+        
+        scoreView = [[UILabel alloc] initWithFrame:scoreViewRect];
+        [scoreView setAutoresizingMask:UIViewAutoresizingFlexibleWidth];
+        [scoreView setFont:[UIFont systemFontOfSize:12]];
+        [scoreView setUserInteractionEnabled:NO];
+        
+        [self.view addSubview:scoreView];
+    }
+    
+    [self updateScore];
+    
     [self reload];
 
+}
+
+-(void)updateScore{
+    
+    NSNumber *score = [self getScore];
+    [scoreView setText:[NSString stringWithFormat:@"Score : %@",score]];
+    [scoreView setTextColor:[UIColor greenColor]];
+    [self.view addSubview:scoreView];
+    
 }
 
 -(void)reload{
@@ -81,7 +104,46 @@ static NSArray *fail_gifs;
         [self nextQuestion];
     }
     
-    //[self nextQuestion];
+    [self updateScore];
+}
+
+-(NSNumber*)getScore{
+    
+    NSNumber *score;
+    
+    NSUserDefaults *sharedDefaults = [[NSUserDefaults alloc] initWithSuiteName:@"group.com.eralpkaraduman.QuickWorld"];
+    score = [sharedDefaults objectForKey:@"SCORE"];
+    
+    if(score == nil) score = [NSNumber numberWithInt:0];
+    
+    return score;
+}
+
+-(void)increaseScore{
+    NSNumber *score = [self getScore];
+    score = @(score.integerValue + 1);
+    [self setScore:score];
+    
+    [self updateScore];
+}
+
+-(void)setScore:(NSNumber*)score{
+    
+    if(score==nil)score = [NSNumber numberWithInt:0];
+    
+    NSUserDefaults *sharedDefaults = [[NSUserDefaults alloc] initWithSuiteName:@"group.com.eralpkaraduman.QuickWorld"];
+    [sharedDefaults setObject:score forKey:@"SCORE"];
+    [sharedDefaults synchronize];
+    
+}
+
+-(void)resetScore{
+    
+    NSNumber *score = [NSNumber numberWithInt:0];
+    [self setScore:score];
+    
+    [self updateScore];
+    
 }
 
 -(void)nextQuestion{
@@ -103,6 +165,8 @@ static NSArray *fail_gifs;
             
         }
     }];
+    
+    [self updateScore];
     
 }
 
@@ -168,6 +232,9 @@ static NSArray *fail_gifs;
 }
 
 -(void)showResultCorrect:(BOOL)correct question:(Question*)question withCompletionBlock:(void (^)())block{
+    
+    if(correct)[self increaseScore]; else [self resetScore];
+                                           
     
     AudioServicesPlaySystemSound(correct?successSound:failSound);
     
